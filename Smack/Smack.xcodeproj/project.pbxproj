@@ -18,6 +18,7 @@
 		C2A9570A2121B0380093B330 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A957092121B0380093B330 /* SWRevealViewController.m */; };
 		C2FEA02D2122DFC000AC4739 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA02C2122DFC000AC4739 /* Constants.swift */; };
 		C2FEA02F2122E30400AC4739 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA02E2122E30400AC4739 /* LoginVC.swift */; };
+		C2FEA0312122FA4400AC4739 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA0302122FA4400AC4739 /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C2A957092121B0380093B330 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
 		C2FEA02C2122DFC000AC4739 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C2FEA02E2122E30400AC4739 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C2FEA0302122FA4400AC4739 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				C257551F2122B77600DBF500 /* ChatVC.swift */,
 				C25755212122B78A00DBF500 /* ChannelVC.swift */,
 				C2FEA02E2122E30400AC4739 /* LoginVC.swift */,
+				C2FEA0302122FA4400AC4739 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				C25755222122B78A00DBF500 /* ChannelVC.swift in Sources */,
 				C25755202122B77600DBF500 /* ChatVC.swift in Sources */,
+				C2FEA0312122FA4400AC4739 /* CreateAccountVC.swift in Sources */,
 				C2FEA02F2122E30400AC4739 /* LoginVC.swift in Sources */,
 				C25755242122C20D00DBF500 /* GradientView.swift in Sources */,
 				C205A48E2121A4D80081F9C7 /* AppDelegate.swift in Sources */,
