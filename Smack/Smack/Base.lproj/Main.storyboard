@@ -500,7 +500,7 @@
                                     <constraint firstAttribute="width" constant="160" id="Wob-8y-ki4"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
+                                    <segment title="Dark"/>
                                     <segment title="Light"/>
                                 </segments>
                                 <color key="tintColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
