@@ -18,6 +18,8 @@
 		C25755222122B78A00DBF500 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25755212122B78A00DBF500 /* ChannelVC.swift */; };
 		C25755242122C20D00DBF500 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25755232122C20D00DBF500 /* GradientView.swift */; };
 		C26A8483212585BD00FA62BE /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A8482212585BD00FA62BE /* UserDataService.swift */; };
+		C26A84852125911100FA62BE /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A84842125911100FA62BE /* AvatarPickerVC.swift */; };
+		C26A84872125936800FA62BE /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A84862125936800FA62BE /* AvatarCell.swift */; };
 		C2A9570A2121B0380093B330 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A957092121B0380093B330 /* SWRevealViewController.m */; };
 		C2FEA02D2122DFC000AC4739 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA02C2122DFC000AC4739 /* Constants.swift */; };
 		C2FEA02F2122E30400AC4739 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA02E2122E30400AC4739 /* LoginVC.swift */; };
@@ -40,6 +42,8 @@
 		C25755212122B78A00DBF500 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		C25755232122C20D00DBF500 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C26A8482212585BD00FA62BE /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		C26A84842125911100FA62BE /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		C26A84862125936800FA62BE /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C2A957072121B0370093B330 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2A957082121B0380093B330 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
 		C2A957092121B0380093B330 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				C25755212122B78A00DBF500 /* ChannelVC.swift */,
 				C2FEA02E2122E30400AC4739 /* LoginVC.swift */,
 				C2FEA0302122FA4400AC4739 /* CreateAccountVC.swift */,
+				C26A84842125911100FA62BE /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				C25755232122C20D00DBF500 /* GradientView.swift */,
 				C2166E7C2125618300F62FEF /* RoundedButton.swift */,
+				C26A84862125936800FA62BE /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25755222122B78A00DBF500 /* ChannelVC.swift in Sources */,
+				C26A84852125911100FA62BE /* AvatarPickerVC.swift in Sources */,
 				C2166E7D2125618300F62FEF /* RoundedButton.swift in Sources */,
 				C25755202122B77600DBF500 /* ChatVC.swift in Sources */,
 				C26A8483212585BD00FA62BE /* UserDataService.swift in Sources */,
@@ -294,6 +301,7 @@
 				C2166E7B21254FAE00F62FEF /* AuthService.swift in Sources */,
 				C2FEA02F2122E30400AC4739 /* LoginVC.swift in Sources */,
 				C25755242122C20D00DBF500 /* GradientView.swift in Sources */,
+				C26A84872125936800FA62BE /* AvatarCell.swift in Sources */,
 				C205A48E2121A4D80081F9C7 /* AppDelegate.swift in Sources */,
 				C2A9570A2121B0380093B330 /* SWRevealViewController.m in Sources */,
 				C2FEA02D2122DFC000AC4739 /* Constants.swift in Sources */,
