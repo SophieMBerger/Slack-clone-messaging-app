@@ -29,9 +29,15 @@ class CreateAccountVC: UIViewController {
         guard let email = emailTxt.text , emailTxt.text != "" else { return}
         guard let pass = passTxt.text , passTxt.text != "" else { return}
         
+        //Calling 1st required API func
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                print("Registered user!")
+                //calling 2nd required API func
+                AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+                    if success {
+                        print("Logged in user!", AuthService.instance.authToken)
+                    }
+                })
             }
         }
     }
