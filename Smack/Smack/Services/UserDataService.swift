@@ -68,6 +68,18 @@ class UserDataService {
         return newUIColor
     }
     
+    //set al variables to empty Strings
+    func logoutUser() {
+        id = ""
+        avatarName = ""
+        avatarColor = ""
+        email = ""
+        name = ""
+        AuthService.instance.isLoggedIn = false
+        AuthService.instance.userEmail = ""
+        AuthService.instance.authToken = ""
+    }
+    
     
     
     
