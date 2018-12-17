@@ -23,7 +23,7 @@
 		C26A8483212585BD00FA62BE /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A8482212585BD00FA62BE /* UserDataService.swift */; };
 		C26A84852125911100FA62BE /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A84842125911100FA62BE /* AvatarPickerVC.swift */; };
 		C26A84872125936800FA62BE /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A84862125936800FA62BE /* AvatarCell.swift */; };
-		C2A9570A2121B0380093B330 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A957092121B0380093B330 /* SWRevealViewController.m */; };
+		C2BDE2DE21C7EDB60011ACE7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BDE2DC21C7EDB60011ACE7 /* SWRevealViewController.m */; };
 		C2FEA02D2122DFC000AC4739 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA02C2122DFC000AC4739 /* Constants.swift */; };
 		C2FEA02F2122E30400AC4739 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA02E2122E30400AC4739 /* LoginVC.swift */; };
 		C2FEA0312122FA4400AC4739 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA0302122FA4400AC4739 /* CreateAccountVC.swift */; };
@@ -51,8 +51,8 @@
 		C26A84842125911100FA62BE /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		C26A84862125936800FA62BE /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		C2A957072121B0370093B330 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
-		C2A957082121B0380093B330 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
-		C2A957092121B0380093B330 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
+		C2BDE2DC21C7EDB60011ACE7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C2BDE2DD21C7EDB60011ACE7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C2FEA02C2122DFC000AC4739 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C2FEA02E2122E30400AC4739 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C2FEA0302122FA4400AC4739 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 		C2A957062121B00F0093B330 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C2A957082121B0380093B330 /* SWRevealViewController.h */,
-				C2A957092121B0380093B330 /* SWRevealViewController.m */,
+				C2BDE2DD21C7EDB60011ACE7 /* SWRevealViewController.h */,
+				C2BDE2DC21C7EDB60011ACE7 /* SWRevealViewController.m */,
 				C2A957072121B0370093B330 /* Smack-Bridging-Header.h */,
 			);
 			path = SupportingFiles;
@@ -312,6 +312,7 @@
 			files = (
 				C25271A82126DE6200973CB0 /* ProfileVC.swift in Sources */,
 				C25755222122B78A00DBF500 /* ChannelVC.swift in Sources */,
+				C2BDE2DE21C7EDB60011ACE7 /* SWRevealViewController.m in Sources */,
 				C26A84852125911100FA62BE /* AvatarPickerVC.swift in Sources */,
 				C2166E7D2125618300F62FEF /* RoundedButton.swift in Sources */,
 				C2677CC22126AC6700CD01FC /* CircleImage.swift in Sources */,
@@ -323,7 +324,6 @@
 				C25755242122C20D00DBF500 /* GradientView.swift in Sources */,
 				C26A84872125936800FA62BE /* AvatarCell.swift in Sources */,
 				C205A48E2121A4D80081F9C7 /* AppDelegate.swift in Sources */,
-				C2A9570A2121B0380093B330 /* SWRevealViewController.m in Sources */,
 				C2FEA02D2122DFC000AC4739 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
