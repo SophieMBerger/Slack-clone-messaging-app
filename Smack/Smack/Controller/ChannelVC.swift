@@ -26,6 +26,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //customize rear view reveal width
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        //        if new channel is added
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     //    if logged in and app opened then fetches user data to display
