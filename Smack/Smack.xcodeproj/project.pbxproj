@@ -17,6 +17,8 @@
 		C205A4982121A4DA0081F9C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C205A4962121A4DA0081F9C7 /* LaunchScreen.storyboard */; };
 		C2166E7B21254FAE00F62FEF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2166E7A21254FAE00F62FEF /* AuthService.swift */; };
 		C2166E7D2125618300F62FEF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2166E7C2125618300F62FEF /* RoundedButton.swift */; };
+		C217086121CA78E100B1A146 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217085F21CA78E100B1A146 /* AddChannelVC.swift */; };
+		C217086221CA78E100B1A146 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C217086021CA78E100B1A146 /* AddChannelVC.xib */; };
 		C25271A82126DE6200973CB0 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25271A62126DE6200973CB0 /* ProfileVC.swift */; };
 		C25271A92126DE6200973CB0 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25271A72126DE6200973CB0 /* ProfileVC.xib */; };
 		C25755202122B77600DBF500 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257551F2122B77600DBF500 /* ChatVC.swift */; };
@@ -47,6 +49,8 @@
 		C205A4992121A4DA0081F9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2166E7A21254FAE00F62FEF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C2166E7C2125618300F62FEF /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		C217085F21CA78E100B1A146 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		C217086021CA78E100B1A146 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		C25271A62126DE6200973CB0 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		C25271A72126DE6200973CB0 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		C257551F2122B77600DBF500 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
@@ -97,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				C205A48C2121A4D80081F9C7 /* Smack */,
-				C205A48B2121A4D80081F9C7 /* Products */,
 				98A9299E715F6C10D97F5F6B /* Pods */,
 				3C897C213051A64A9DD0131E /* Frameworks */,
 			);
@@ -109,6 +112,7 @@
 				C205A48A2121A4D80081F9C7 /* Smack.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C205A48C2121A4D80081F9C7 /* Smack */ = {
@@ -126,6 +130,7 @@
 				C205A4942121A4DA0081F9C7 /* Assets.xcassets */,
 				C205A4962121A4DA0081F9C7 /* LaunchScreen.storyboard */,
 				C205A4992121A4DA0081F9C7 /* Info.plist */,
+				C205A48B2121A4D80081F9C7 /* Products */,
 			);
 			path = Smack;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				C25271A72126DE6200973CB0 /* ProfileVC.xib */,
+				C217086021CA78E100B1A146 /* AddChannelVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 				C2FEA0302122FA4400AC4739 /* CreateAccountVC.swift */,
 				C26A84842125911100FA62BE /* AvatarPickerVC.swift */,
 				C25271A62126DE6200973CB0 /* ProfileVC.swift */,
+				C217085F21CA78E100B1A146 /* AddChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C217086221CA78E100B1A146 /* AddChannelVC.xib in Resources */,
 				C25271A92126DE6200973CB0 /* ProfileVC.xib in Resources */,
 				C205A4982121A4DA0081F9C7 /* LaunchScreen.storyboard in Resources */,
 				C205A4952121A4DA0081F9C7 /* Assets.xcassets in Resources */,
@@ -332,6 +340,7 @@
 				C26A8483212585BD00FA62BE /* UserDataService.swift in Sources */,
 				C2FEA0312122FA4400AC4739 /* CreateAccountVC.swift in Sources */,
 				C2166E7B21254FAE00F62FEF /* AuthService.swift in Sources */,
+				C217086121CA78E100B1A146 /* AddChannelVC.swift in Sources */,
 				C2FEA02F2122E30400AC4739 /* LoginVC.swift in Sources */,
 				C25755242122C20D00DBF500 /* GradientView.swift in Sources */,
 				C26A84872125936800FA62BE /* AvatarCell.swift in Sources */,
