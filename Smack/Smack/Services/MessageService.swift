@@ -17,6 +17,8 @@ class MessageService {
     
     //    an array of objects of Channel modle
     var channels = [Channel]()
+    //    the currently selected channel (optional)
+    var selectedChannel: Channel?
     
     //    func with web request to API to return channels
     func findAllChannel(completion: @escaping CompletionHandler) {
@@ -28,6 +30,7 @@ class MessageService {
                 //using decodable protocol to unwrapp JSON data
                 do {
                     self .channels = try JSONDecoder().decode([Channel].self, from: data)
+                    NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                 } catch let error {
                     debugPrint(error as Any)
                 }
@@ -50,6 +53,10 @@ class MessageService {
                 debugPrint(response.result.error as Any)
             }
         }
+    }
+    
+    func clearChannels() {
+        channels.removeAll()
     }
     
 }
