@@ -30,29 +30,29 @@ class MessageService {
                 //create JSON object from data (parse-out JSON)
                 guard let data = response.data else { return }
                 //using decodable protocol to unwrapp JSON data
-                do {
-                    self .channels = try JSONDecoder().decode([Channel].self, from: data)
-                    NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
-                } catch let error {
-                    debugPrint(error as Any)
-                }
-
-                //give array of JSON objects (dictated by Postamn as return type)
-//                if let json = JSON(data: data).array {
-//                    for item in  json {
-//                        let name = item["name"].stringValue
-//                        let channelDescription = item["description"].stringValue
-//                        let id = item["_id"].stringValue
-//                        //create new Channel object with data
-//                        let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
-//                        //store object in array
-//                        self.channels.append(channel)
-//                    }
-//                    completion(true)
+//                do {
+//                    self .channels = try JSONDecoder().decode([Channel].self, from: data)
+//                    NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
+//                } catch let error {
+//                    debugPrint(error as Any)
 //                }
+
+//                give array of JSON objects (dictated by Postamn as return type)
+                let json = try! JSON(data: data).array
+                for item in json! {
+                    let name = item["name"].stringValue
+                    let channelDescription = item["description"].stringValue
+                    let id = item["_id"].stringValue
+                    //create new Channel object with data
+                    let channel = Channel(name: name, channelDescription: channelDescription, id: id)
+                    //store object in array
+                    self.channels.append(channel)
+                }
+                completion(true)
+                
             } else {
-                completion(false)
                 debugPrint(response.result.error as Any)
+                completion(false)
             }
         }
     }
