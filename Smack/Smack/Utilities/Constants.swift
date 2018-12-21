@@ -26,7 +26,7 @@ let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 
 let URL_GET_CHANNELS = "\(BASE_URL)channel/"
 
-let URL_GET_MESSAGES = "\(BASE_URL)/message/byChannel"
+let URL_GET_MESSAGES = "\(BASE_URL)/message/byChannel/"
 
 //Colors
 let SMACKPURPLEPLACEHOLDER = #colorLiteral(red: 0.3254901961, green: 0.4215201139, blue: 0.7752227187, alpha: 0.5)
