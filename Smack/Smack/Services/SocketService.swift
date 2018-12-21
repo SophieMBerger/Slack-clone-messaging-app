@@ -49,4 +49,12 @@ class SocketService: NSObject {
             completion(true)
         }
     }
+    
+    //    when a new message is created --> adds messages to API
+    func addMessage(messageBody: String, userId: String, channelId: String, completion: @escaping CompletionHandler) {
+        //        to save typing effort
+        let user = UserDataService.instance
+        socket.emit("newMessage", messageBody, userId, channelId, user.name, user.avatarName, user.avatarColor)
+        completion(true)
+    }
 }
