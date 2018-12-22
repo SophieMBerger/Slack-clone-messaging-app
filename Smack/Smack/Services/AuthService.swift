@@ -83,29 +83,40 @@ class AuthService {
     
     //Function for loggingin user
     func loginUser(email: String, password: String, completion: @escaping CompletionHandler) {
-        
         let lowerCaseEmail = email.lowercased()
-        
         //creating body (JSON object with multiple key-value pairs)
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password": password
         ]
-        
         //Web-request with JSON response (more typical)
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
-            if response.result.error == nil {
+                if response.result.error == nil {
+                    guard let data = response.data else {return}
+                    let json = try! JSON(data: data)
+                    self.userEmail = json["user"].stringValue
+                    self.authToken = json["token"].stringValue
+                    
+                    self.isLoggedIn = true
+                    completion(true)
+                }else {
+                    completion(false)
+                    debugPrint(response.result.error as Any)
+            }
+            
+        }
+    }
                 //JSON parsing
                 
 //                parsing JSON object to String type Dictionary (manual)
-                if let json = response.result.value as? Dictionary<String, Any> {
-                    if let email = json["user"] as? String {
-                        self.userEmail = email
-                    }
-                    if let token = json["token"] as? String {
-                        self.authToken = token
-                    }
-                }
+//                if let json = response.result.value as? Dictionary<String, Any> {
+//                    if let email = json["user"] as? String {
+//                        self.userEmail = email
+//                    }
+//                    if let token = json["token"] as? String {
+//                        self.authToken = token
+//                    }
+//                }
                 //using swiftyJSON
                 
 //                //get data out of web-response
@@ -113,34 +124,18 @@ class AuthService {
 //                self.userEmail = json["user"].stringValue //safely unwrapps value automatically (sets to empty string if nil)
 //                self.authToken = json["token"].stringValue
                 
-                self.isLoggedIn = true
-                completion(true)
-            }else {
-                completion(false)
-                debugPrint(response.result.error as Any)
-            }
-            
-        }
-    }
     
     
     
     
     //Create user function
     func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler) {
-        
         let lowerCaseEmail = email.lowercased()
-
         //creating body
         let body: [String: Any] = [
             "name": name,
             "email": lowerCaseEmail,
-            "avatarName": avatarName,
-            "avatarColor": avatarColor
-        ]
-        
-        
-        
+            "avatarName": avatarName,]
         Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
                 let json: JSON = JSON(response.result.value!)
