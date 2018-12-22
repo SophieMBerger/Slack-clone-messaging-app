@@ -78,8 +78,14 @@ class SocketService: NSObject {
             } else {
                 completion(false)
             }
-
-
+        }
+    }
+    
+//    new completion handler instead of passing in boolean, pass in a dictionary of String pairs
+    func getTyoingUsers(_ completionHandler: @escaping (_ typingUsers: [String: String]) -> Void) {
+        socket.on("userTypingUpdate") { (dataArray, ack) in
+            guard let typingUsers = dataArray[0] as? [String: String] else {return}
+            completionHandler(typingUsers)
         }
         
     }
