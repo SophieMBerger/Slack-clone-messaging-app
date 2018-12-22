@@ -97,23 +97,21 @@ class AuthService {
             if response.result.error == nil {
                 //JSON parsing
                 
-                //parsing JSON object to String type Dictionary (manual)
-                //if let json = response.result.value as? Dictionary<String, Any> {
-                    //if let email = json["user"] as? String {
-                        //self.userEmail = email
-                    //}
-                    //if let token = json["token"] as? String {
-                        //self.authToken = token
-                    //}
-                //}
-                
-                
+//                parsing JSON object to String type Dictionary (manual)
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    if let email = json["user"] as? String {
+                        self.userEmail = email
+                    }
+                    if let token = json["token"] as? String {
+                        self.authToken = token
+                    }
+                }
                 //using swiftyJSON
                 
-                //get data out of web-response
-                let json: JSON = JSON(response.result.value!)
-                self.userEmail = json["user"].stringValue //safely unwrapps value automatically (sets to empty string if nil)
-                self.authToken = json["token"].stringValue
+//                //get data out of web-response
+//                let json: JSON = JSON(response.result.value!)
+//                self.userEmail = json["user"].stringValue //safely unwrapps value automatically (sets to empty string if nil)
+//                self.authToken = json["token"].stringValue
                 
                 self.isLoggedIn = true
                 completion(true)
