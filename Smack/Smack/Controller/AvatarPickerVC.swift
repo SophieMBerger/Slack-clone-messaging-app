@@ -45,9 +45,9 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func segmentControlChanged(_ sender: Any) {
         if segmentControl.selectedSegmentIndex == 0 {
-            avatarType = AvatarType.dark
+            avatarType = .dark
         }else {
-            avatarType = AvatarType.light
+            avatarType = .light
         }
         collectionView.reloadData() //calls all collectionView functions again
     }
