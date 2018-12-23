@@ -50,6 +50,7 @@ class MessageService {
                     //store object in array
                     self.channels.append(channel)
                 }
+                NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                 completion(true)
                 
             } else {
@@ -79,6 +80,7 @@ class MessageService {
                     
                     self.messages.append(message)
                 }
+                print(self.messages)
                 completion(true)
             } else {
                 debugPrint(response.result.error as Any)
