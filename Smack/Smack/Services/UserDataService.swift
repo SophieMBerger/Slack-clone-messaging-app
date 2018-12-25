@@ -26,11 +26,16 @@ class UserDataService {
         self.email = email
         self.name = name
     }
+    
+    func setUsername(newUsername: String) {
+        self.name = newUsername
+    }
 
     func setAvatarName(avatarName: String) {
         self.avatarName = avatarName
     }
     
+   
     //returns the color corresponding to the RGB values stored in the user JSON object's String
     func returnUIColor(components: String) -> UIColor {
         

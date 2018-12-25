@@ -43,6 +43,7 @@ class AuthService {
         }
     }
     
+    
     var userEmail : String {
         get {
             return defaults.value(forKey: USER_EMAIL) as! String
@@ -58,8 +59,6 @@ class AuthService {
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler) {
         
         let lowerCaseEmail = email.lowercased()
-        
-        
         
         //creating body (JSON object with multiple key-value pairs)
         let body: [String: Any] = [
@@ -169,22 +168,30 @@ class AuthService {
                 UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
+    
+    //    change username
+    func changeUsername(newUsername: String, completion: @escaping CompletionHandler) {
+        
+        let body: [String: Any] = ["name": newUsername]
+        
+        //        body value correctly assigned here
+        
+        Alamofire.request(URL_CHANGE_USERNAME, method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                let json: JSON = JSON(response.result.value!)
+                //                json not assigned correct value
+                let newUsername = json["name"].stringValue
+                                
+                //                newUsername not set correctly here
+                
+                UserDataService.instance.setUsername(newUsername: newUsername)
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
 }
