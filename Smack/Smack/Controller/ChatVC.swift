@@ -183,6 +183,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    
     func getMessages() {
         guard let channelId = MessageService.instance.selectedChannel?.id else {return}
         MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in

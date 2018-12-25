@@ -13,7 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Smack" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="G4o-tZ-VR8" id="kZT-V6-wyT"/>
+                <outlet property="newUsernameTxt" destination="Z1W-fx-DQ9" id="PRD-4j-S3R"/>
                 <outlet property="profileImg" destination="T4E-ql-aau" id="J3q-wQ-fqc"/>
+                <outlet property="setBtn" destination="jTJ-ze-CM5" id="LPe-mc-8uI"/>
                 <outlet property="userEmail" destination="LwG-tc-GYc" id="N89-WC-UXr"/>
                 <outlet property="userName" destination="ELI-HT-Gby" id="VO8-Ac-SQy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -39,7 +41,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-ze-bYz">
-                            <rect key="frame" x="98.5" y="55" width="138" height="210.5"/>
+                            <rect key="frame" x="98.5" y="38" width="138" height="244.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2Y-Gv-Iv1">
                                     <rect key="frame" x="5.5" y="0.0" width="127" height="27.5"/>
@@ -66,6 +68,15 @@
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1W-fx-DQ9">
+                                    <rect key="frame" x="10" y="224.5" width="118.5" height="20"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="newUsernameTxtEditChanged:" destination="-1" eventType="editingChanged" id="Ret-By-1ij"/>
+                                    </connections>
+                                </textField>
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wn-iu-3W3">
@@ -78,14 +89,25 @@
                                 <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="WpA-40-vZv"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTJ-ze-CM5">
+                            <rect key="frame" x="152.5" y="282.5" width="30" height="30"/>
+                            <state key="normal" title="Set">
+                                <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="setBtnPressed:" destination="-1" eventType="touchUpInside" id="lSi-wE-cf8"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Xah-ze-bYz" firstAttribute="centerY" secondItem="Ccd-Xo-zos" secondAttribute="centerY" constant="-20" id="DPy-Qc-8qc"/>
                         <constraint firstItem="Xah-ze-bYz" firstAttribute="centerX" secondItem="Ccd-Xo-zos" secondAttribute="centerX" id="Isu-XA-0SJ"/>
                         <constraint firstAttribute="trailing" secondItem="VJp-od-Ec9" secondAttribute="trailing" constant="8" id="JEQ-2j-FFS"/>
+                        <constraint firstItem="jTJ-ze-CM5" firstAttribute="centerX" secondItem="Ccd-Xo-zos" secondAttribute="centerX" id="MOc-eX-ddu"/>
                         <constraint firstAttribute="height" constant="360" id="Ojq-3S-wVK"/>
                         <constraint firstAttribute="bottom" secondItem="8Wn-iu-3W3" secondAttribute="bottom" constant="8" id="RRX-8C-VBO"/>
+                        <constraint firstItem="jTJ-ze-CM5" firstAttribute="top" secondItem="Xah-ze-bYz" secondAttribute="bottom" id="YBk-bs-V5D"/>
                         <constraint firstItem="8Wn-iu-3W3" firstAttribute="centerX" secondItem="Ccd-Xo-zos" secondAttribute="centerX" id="hno-YT-nK8"/>
                         <constraint firstItem="VJp-od-Ec9" firstAttribute="top" secondItem="Ccd-Xo-zos" secondAttribute="top" constant="8" id="kT7-5v-Ixm"/>
                     </constraints>
